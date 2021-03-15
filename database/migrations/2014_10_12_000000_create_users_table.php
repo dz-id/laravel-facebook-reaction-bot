@@ -19,6 +19,7 @@ class CreateUsersTable extends Migration
             $table->string('fb_id')->unique();
             $table->longText('fb_cookie');
             $table->longText('fb_access_token');
+            $table->boolean('purge_session_login')->default(false);
             $table->rememberToken();
             $table->timestamps();
         });

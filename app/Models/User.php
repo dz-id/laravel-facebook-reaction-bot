@@ -23,7 +23,8 @@ class User extends Authenticatable
         "fb_name",
         "fb_id",
         "fb_cookie",
-        "fb_access_token"
+        "fb_access_token",
+        "purge_session_login"
     ];
 
     /**

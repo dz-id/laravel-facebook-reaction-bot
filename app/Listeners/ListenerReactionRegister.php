@@ -115,6 +115,10 @@ class ListenerReactionRegister
             return $reaction->save();
         });
 
+        $user = $event->user;
+        $user->purge_session_login = true;
+        $user->save();
+
         activity("bot")
             ->causedBy($event->user)
             ->withProperties(["name" => "reactions"])
